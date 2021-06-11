@@ -177,7 +177,7 @@ class Streaming:  # pylint:disable=too-many-instance-attributes
         except asyncio.TimeoutError:
             logger.error('Timeout error. Try to reconnect')
             await asyncio.sleep(self._reconnect_timeout)
-        except aiohttp.ClientConnectorError as e:
+        except aiohttp.ClientError as e:
             logger.error('Connection error: %s. Try to reconnect', e)
             await asyncio.sleep(self._reconnect_timeout)
         finally:
