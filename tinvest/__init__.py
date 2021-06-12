@@ -1,4 +1,4 @@
-__version__ = '3.0.3'
+__version__ = '3.0.4'
 __api_version__ = '20.4'  # pragma: no mutate
 
 try:
