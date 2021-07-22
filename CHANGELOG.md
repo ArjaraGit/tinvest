@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [v3.0.5](https://github.com/daxartio/tinvest/releases/tag/v3.0.5) - 2021-07-22
+
+<small>[Compare with v3.0.4](https://github.com/daxartio/tinvest/compare/v3.0.4...v3.0.5)</small>
+
+### Fixed
+- Fix unused exception ([b6caedc](https://github.com/daxartio/tinvest/commit/b6caedc50ef153480749e483497ddcad166cd444) by Danil Akhtarov).
+
+
+## [v3.0.4](https://github.com/daxartio/tinvest/releases/tag/v3.0.4) - 2021-06-12
+
+<small>[Compare with v3.0.3](https://github.com/daxartio/tinvest/compare/v3.0.3...v3.0.4)</small>
+
+
+## [v3.0.3](https://github.com/daxartio/tinvest/releases/tag/v3.0.3) - 2021-03-12
+
+<small>[Compare with v3.0.2](https://github.com/daxartio/tinvest/compare/v3.0.2...v3.0.3)</small>
+
+### Fixed
+- Fix types ([e1a2a0e](https://github.com/daxartio/tinvest/commit/e1a2a0e92c967284efe1e23fc5c96bccb4e9ac5d) by Danil Akhtarov).
+- Fix changelog ([7154771](https://github.com/daxartio/tinvest/commit/71547713e5232f0732b5c17de4ffea0289baa490) by Danil Akhtarov).
+
+
 ## [v3.0.2](https://github.com/daxartio/tinvest/releases/tag/v3.0.2) - 2021-02-22
 
 <small>[Compare with v3.0.1](https://github.com/daxartio/tinvest/compare/v3.0.1...v3.0.2)</small>
