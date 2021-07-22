@@ -5,7 +5,6 @@ __all__ = (
     'BadRequestError',
     'TooManyRequestsError',
     'UnexpectedError',
-    'SubscriptionElreadyExists',
 )
 
 
@@ -28,7 +27,3 @@ class UnexpectedError(TinvestError):
         super().__init__(f'{status} {text}')
         self.status = status
         self.text = text
-
-
-class SubscriptionElreadyExists(TinvestError):
-    pass

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tinvest"
-version = "3.0.4"
+version = "3.0.5"
 description = "Tinkoff Invest"
 authors = ["Danil Akhtarov <daxartio@gmail.com>"]
 license = "MIT"
