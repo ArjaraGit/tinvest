@@ -61,7 +61,7 @@ toml = "*"
 typer-cli = "*"
 unify = "*"
 types-orjson = "^0.1.0"
-types-requests = "^0.1.10"
+types-requests = "^2.25.2"
 types-toml = "^0.1.1"
 
 [tool.poetry.extras]
