@@ -8,6 +8,7 @@ help:
 	@echo ''
 	@echo '    make all'
 	@echo '    make install'
+	@echo '    make update'
 	@echo '    make build'
 	@echo '    make clean'
 	@echo '    make docs-changelog'

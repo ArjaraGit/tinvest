@@ -161,3 +161,40 @@ client = tinvest.AsyncClient(SANDBOX_TOKEN, use_sandbox=True)
 ## Contributing
 
 Предлагайте свои пулл реквесты, проект с открытым исходным кодом.
+
+### Установка зависимостей
+
+```
+python install poetry
+make install
+```
+
+### Запуск тестов
+
+```
+make test
+```
+
+### Автоформатирование кода
+
+```
+make format
+```
+
+### Проверка кода
+
+```
+make lint
+```
+
+### Релизы
+
+Сборка проекта происходит автоматически по установленному `git tag`.
+
+Также необходимо указать версию в файлах
+
+```
+tinvest/
+  __init__.py
+pyproject.toml
+```
