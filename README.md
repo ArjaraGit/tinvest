@@ -149,6 +149,52 @@ client = tinvest.AsyncClient(SANDBOX_TOKEN, use_sandbox=True)
 # client = tinvest.SyncClient(SANDBOX_TOKEN, use_sandbox=True)
 ```
 
+### Metrics
+
+Есть возможность запустить сервер для сбора метрик.
+Формат [prometheus](https://prometheus.io/).
+
+```python
+import tinvest
+from tinvest.metrics import (
+    collect_client_metrics,
+    collect_streaming_metrics,
+    run_metrics_server,
+)
+
+async def main() -> None:
+    await run_metrics_server()
+
+    client = tinvest.AsyncClient(...)
+    collect_client_metrics(client)
+
+    streaming = tinvest.Streaming(...)
+    collect_streaming_metrics(streaming)
+```
+
+По умолчанию, доступен по адресу http://localhost:8080/metrics
+
+```
+tinvest_requests_total{endpoint="/market/search/by-figi",method="GET"} 1.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.005"} 76.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.01"} 125.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.025"} 183.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.05"} 312.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.075"} 426.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.1"} 536.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.25"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.5"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="0.75"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="1.0"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="2.5"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="5.0"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="7.5"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="10.0"} 594.0
+tinvest_streaming_latency_seconds_bucket{event="orderbook",le="+Inf"} 594.0
+tinvest_streaming_latency_seconds_count{event="orderbook"} 594.0
+tinvest_streaming_latency_seconds_sum{event="orderbook"} 29.609788000000005
+```
+
 ## Environments
 
 | name                  | required | default |

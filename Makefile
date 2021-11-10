@@ -90,6 +90,10 @@ build:
 install:
 	poetry install
 
+.PHONY: install
+install-with-extras:
+	poetry install --extras "cli metrics uvloop orjson"
+
 .PHONY: clean
 clean:
 	rm -rf docs/cli.md || true

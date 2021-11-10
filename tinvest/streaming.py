@@ -120,14 +120,8 @@ class Streaming:  # pylint:disable=too-many-instance-attributes
         return exc_type is None
 
     async def __aiter__(self):
-        try:  # pylint:disable=too-many-nested-blocks
-            while True:
-                event = await self._queue.get()
-                if event is STOP_QUEUE:
-                    break
-                yield event
-        finally:
-            await self._unsubscribe()
+        async for event in self._get_events():
+            yield event
 
     async def start(self):
         self._connection_task = asyncio.create_task(self._run())
@@ -225,6 +219,16 @@ class Streaming:  # pylint:disable=too-many-instance-attributes
         await self.candle._unsubscribe_all()
         await self.instrument_info._unsubscribe_all()
         await self.orderbook._unsubscribe_all()
+
+    async def _get_events(self):
+        try:  # pylint:disable=too-many-nested-blocks
+            while True:
+                event = await self._queue.get()
+                if event is STOP_QUEUE:
+                    break
+                yield event
+        finally:
+            await self._unsubscribe()
 
 
 def _parse_response(response: StreamingResponse) -> Any:

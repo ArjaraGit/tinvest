@@ -7,7 +7,7 @@ python:
 
 install:
   - pip install poetry
-  - poetry install --extras "uvloop orjson cli"
+  - poetry install --extras "uvloop orjson cli metrics"
 
 script:
   - make lint test
