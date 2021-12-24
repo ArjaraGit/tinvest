@@ -136,3 +136,6 @@ venv
 .vscode
 
 docs/cli.md
+
+#token in config
+/config/config.yaml
