@@ -1,5 +1,0 @@
-# Токен: строка, прописать в кавычках
-TOKEN: "132"
-
-# Тип портфеля: Tinkoff или TinkoffIis
-PORTFOLIO_TYPE: "TinkoffIis"
