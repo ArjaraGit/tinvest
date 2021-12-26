@@ -138,4 +138,4 @@ venv
 docs/cli.md
 
 #token in config
-/config/config.yaml
+/config_tinvest/config.yaml
