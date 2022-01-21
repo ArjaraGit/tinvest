@@ -50,7 +50,7 @@ pip install tinvest[orjson]
 
 [tinvest](https://daxartio.github.io/tinvest/)
 
-[invest-openapi](https://tinkoffcreditsystems.github.io/invest-openapi/)
+[invest-openapi](https://tinkoff.github.io/invest-openapi/)
 
 ### Быстрый старт
 
@@ -60,12 +60,12 @@ pip install tinvest[orjson]
 
 ### У меня есть вопрос
 
-[Основной репозиторий с документацией](https://github.com/TinkoffCreditSystems/invest-openapi/) — в нем вы можете задать вопрос в Issues и получать информацию о релизах в Releases.
+[Основной репозиторий с документацией](https://github.com/tinkoff/invest-openapi/) — в нем вы можете задать вопрос в Issues и получать информацию о релизах в Releases.
 Если возникают вопросы по данному SDK, нашёлся баг или есть предложения по улучшению, то можно задать его в Issues.
 
 ## Примеры
 
-Для работы с данным пакетом вам нужно изучить [OpenAPI Тинькофф Инвестиции](https://tinkoffcreditsystems.github.io/invest-openapi/swagger-ui/)
+Для работы с данным пакетом вам нужно изучить [OpenAPI Тинькофф Инвестиции](https://tinkoff.github.io/invest-openapi/swagger-ui/)
 
 ### Streaming
 

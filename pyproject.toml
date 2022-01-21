@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tinvest"
-version = "3.0.5"
+version = "3.0.6"
 description = "Tinkoff Invest"
 authors = ["Danil Akhtarov <daxartio@gmail.com>"]
 license = "MIT"
@@ -14,7 +14,7 @@ tinvest = 'tinvest.cli.app:app'
 
 [tool.poetry.dependencies]
 python = "^3.8"
-aiohttp = "^3.6"
+aiohttp = "^3.8.0"
 pydantic = "^1.2"
 requests = "^2.22"
 typer = {version = "^0.3.2", optional = true}
